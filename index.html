@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OSSGenesis — Bibin Skaria</title>
+    <meta name="description" content="OSSGenesis — portfolio of Bibin Skaria. Open source, DevOps, and cloud projects including EKS Without IP Limit (Terraform + EKS 1.33)." />
+    <meta property="og:title" content="OSSGenesis — Bibin Skaria" />
+    <meta property="og:description" content="Open source, DevOps, and cloud projects including EKS Without IP Limit (Terraform + EKS 1.33)." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      // Tailwind via CDN
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // dark mode bootstrap
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <style>
+      :root { --ring: 0 0% 0%; }
+      html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.65); }
+      .dark .glass { background: rgba(17,24,39,0.6); }
+      .gradient {
+        background: radial-gradient(1200px 500px at 10% 10%, rgba(14,165,233,0.25), transparent),
+                    radial-gradient(1000px 400px at 90% 20%, rgba(99,102,241,0.2), transparent),
+                    radial-gradient(900px 300px at 50% 80%, rgba(34,197,94,0.18), transparent);
+      }
+    </style>
+  </head>
+  <body class="gradient min-h-screen text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-900">
+    <!-- Nav -->
+    <header class="sticky top-0 z-30">
+      <div class="glass border-b border-white/20 dark:border-slate-700/60">
+        <nav class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+          <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-sky-500 text-white font-bold">OG</span>
+            <span>OSSGenesis</span>
+          </a>
+          <div class="flex items-center gap-3 text-sm">
+            <a class="hover:underline" href="#projects">Projects</a>
+            <a class="hover:underline" href="#activity">Activity</a>
+            <a class="hover:underline" href="#about">About</a>
+            <a class="hidden sm:inline-block rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Sponsor</a>
+            <button id="themeToggle" class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle theme">🌓</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="mx-auto max-w-6xl px-4 pt-14 pb-12 sm:pt-20 sm:pb-16">
+      <div class="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start">
+        <div class="sm:w-7/12">
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            Building open source infrastructure that teams can trust.
+          </h1>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+            I’m <strong>Bibin Skaria</strong> — DevOps Engineer. I design and operate cloud platforms on
+            <strong>AWS & Kubernetes (EKS)</strong> with <strong>Terraform</strong>, CI/CD, and security-first defaults.
+            This is the home for my projects and community work under <strong>OSSGenesis</strong>.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-xl bg-sky-600 px-4 py-2 text-white hover:bg-sky-500">Explore projects</a>
+            <a href="https://github.com/bibin-skaria" target="_blank" rel="noopener" class="rounded-xl border border-slate-300/60 dark:border-slate-700/80 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
+            <a href="https://orcid.org/0009-0004-8976-8186" target="_blank" rel="noopener" class="rounded-xl border border-slate-300/60 dark:border-slate-700/80 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">ORCID</a>
+          </div>
+          <div class="mt-6">
+            <a href="https://doi.org/10.5281/zenodo.16883393" target="_blank" rel="noopener">
+              <img alt="DOI badge" src="https://zenodo.org/badge/DOI/10.5281/zenodo.16883393.svg" class="h-8"/>
+            </a>
+          </div>
+        </div>
+        <div class="sm:w-5/12">
+          <div class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/60 dark:bg-slate-800/60 shadow-sm">
+            <h2 class="text-xl font-semibold">Quick links</h2>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a class="hover:underline" href="https://github.com/bibin-skaria/eks-without-ip-limit" target="_blank" rel="noopener">EKS Without IP Limit (GitHub)</a></li>
+              <li><a class="hover:underline" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Open Collective (donate)</a></li>
+              <li><a class="hover:underline" href="https://doi.org/10.5281/zenodo.16883393" target="_blank" rel="noopener">Zenodo DOI (v1.33.0)</a></li>
+              <li><a class="hover:underline" href="mailto:bibin9992009@gmail.com">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-8">
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects</h2>
+        <a href="https://github.com/bibin-skaria?tab=repositories" target="_blank" rel="noopener" class="text-sky-600 hover:underline">All repos →</a>
+      </div>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <!-- Project Card -->
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <div class="flex items-start justify-between">
+            <h3 class="text-xl font-semibold">EKS Without IP Limit</h3>
+            <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-3 py-1 text-xs font-medium">v1.33.0</span>
+          </div>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Terraform-based Amazon EKS reference architecture targeting Kubernetes/EKS 1.33. Avoids pod IP exhaustion using
+            AWS VPC CNI <em>custom networking</em> + <em>prefix delegation</em>, with an optional Cilium overlay. Module-based, production-ready.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Terraform</span>
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">EKS 1.33</span>
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">VPC CNI</span>
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Cilium</span>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a class="rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" target="_blank" rel="noopener" href="https://github.com/bibin-skaria/eks-without-ip-limit">GitHub</a>
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://doi.org/10.5281/zenodo.16883393">DOI</a>
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://opencollective.com/eks-without-ip-limit">Sponsor</a>
+          </div>
+        </article>
+
+        <!-- Add more project cards as needed -->
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <div class="flex items-start justify-between">
+            <h3 class="text-xl font-semibold">OSSGenesis Site</h3>
+            <span class="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 px-3 py-1 text-xs font-medium">personal</span>
+          </div>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            This website template — clean Tailwind CSS, dark mode, sections for projects and activity. Fork it and add your own content.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Tailwind</span>
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Static</span>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" href="#" onclick="alert('This is the current page. Save as index.html to your domain hosting.'); return false;">Get this file</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Activity -->
+    <section id="activity" class="mx-auto max-w-6xl px-4 py-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Recent Activity</h2>
+      <ol class="mt-6 space-y-4">
+        <li class="rounded-xl border border-slate-200/70 dark:border-slate-700/80 p-4 bg-white/70 dark:bg-slate-800/60">
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑08‑15</span>
+            <span class="text-xs rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-2 py-1">release</span>
+          </div>
+          <p class="mt-1 font-medium">Released <em>EKS Without IP Limit</em> v1.33.0 and minted DOI.</p>
+          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://doi.org/10.5281/zenodo.16883393">10.5281/zenodo.16883393</a>
+        </li>
+        <li class="rounded-xl border border-slate-200/70 dark:border-slate-700/80 p-4 bg-white/70 dark:bg-slate-800/60">
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑08‑15</span>
+            <span class="text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-2 py-1">community</span>
+          </div>
+          <p class="mt-1 font-medium">Opened Open Collective for project sustainability.</p>
+          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://opencollective.com/eks-without-ip-limit">opencollective.com/eks-without-ip-limit</a>
+        </li>
+        <li class="rounded-xl border border-slate-200/70 dark:border-slate-700/80 p-4 bg-white/70 dark:bg-slate-800/60">
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑08‑15</span>
+            <span class="text-xs rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-2 py-1">profile</span>
+          </div>
+          <p class="mt-1 font-medium">Added ORCID record for the v1.33.0 software release.</p>
+          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://orcid.org/0009-0004-8976-8186">orcid.org/0009-0004-8976-8186</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mx-auto max-w-6xl px-4 py-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">About</h2>
+      <div class="mt-4 grid gap-6 sm:grid-cols-3">
+        <div class="sm:col-span-2">
+          <p class="text-slate-600 dark:text-slate-300">
+            I’m a DevOps Engineer focused on reliable, secure, and cost‑efficient cloud platforms on AWS & Kubernetes.
+            I like turning complex infra into reusable modules and teaching others through docs and examples.
+          </p>
+          <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-sm">
+            <li>• AWS, EKS, Terraform, Helm</li>
+            <li>• CI/CD: Jenkins, Spinnaker, Harness</li>
+            <li>• Observability: CloudWatch, ELK, Prometheus</li>
+            <li>• Certs: AWS SA, CKA, Azure DevOps, ex‑RHCE/RHCSA</li>
+          </ul>
+        </div>
+        <aside class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <h3 class="font-semibold">Links</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/bibin-skaria">GitHub</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://doi.org/10.5281/zenodo.16883393">Zenodo (DOI)</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://orcid.org/0009-0004-8976-8186">ORCID</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://opencollective.com/eks-without-ip-limit">Open Collective</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200/70 dark:border-slate-700/80">
+      <div class="mx-auto max-w-6xl px-4 py-6 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© <span id="year"></span> OSSGenesis · Built with ❤ and open source.</p>
+        <div class="flex items-center gap-3">
+          <a class="hover:underline" href="mailto:bibin9992009@gmail.com">Contact</a>
+          <a class="hover:underline" href="https://github.com/bibin-skaria/eks-without-ip-limit">Repo</a>
+          <a class="hover:underline" href="https://opencollective.com/eks-without-ip-limit">Sponsor</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>
+
