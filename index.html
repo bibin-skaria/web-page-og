@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>OSSGenesis — Bibin Skaria</title>
-    <meta name="description" content="OSSGenesis — portfolio of Bibin Skaria. Open source, DevOps, and cloud projects including EKS Without IP Limit (Terraform + EKS 1.33)." />
-    <meta property="og:title" content="OSSGenesis — Bibin Skaria" />
-    <meta property="og:description" content="Open source, DevOps, and cloud projects including EKS Without IP Limit (Terraform + EKS 1.33)." />
+    <title>OSSGenesis — Open Source Cloud Infrastructure Patterns</title>
+    <meta name="description" content="OSSGenesis builds production-ready open source blueprints for cloud infrastructure, CICD, and container platforms." />
+    <meta property="og:title" content="OSSGenesis — Open Source Cloud Infrastructure Patterns" />
+    <meta property="og:description" content="Explore Terraform EKS architecture, Jenkins cloud-native workflows, and OSSB container builder research from OSSGenesis." />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#0ea5e9" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,21 +64,22 @@
       <div class="flex flex-col-reverse items-center gap-10 sm:flex-row sm:items-start">
         <div class="sm:w-7/12">
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-            Building open source infrastructure that teams can trust.
+            Open source delivery guides for high-trust cloud platforms.
           </h1>
           <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
-            I’m <strong>Bibin Skaria</strong> — DevOps Engineer. I design and operate cloud platforms on
-            <strong>AWS & Kubernetes (EKS)</strong> with <strong>Terraform</strong>, CI/CD, and security-first defaults.
-            This is the home for my projects and community work under <strong>OSSGenesis</strong>.
+            <strong>OSSGenesis</strong> is an open source initiative focused on reusable playbooks for AWS, Kubernetes, CI/CD,
+            and secure container delivery. Our repositories document production patterns so platform teams can launch faster
+            with confidence.
           </p>
           <div class="mt-6 flex flex-wrap gap-3">
-            <a href="#projects" class="rounded-xl bg-sky-600 px-4 py-2 text-white hover:bg-sky-500">Explore projects</a>
-            <a href="https://github.com/bibin-skaria" target="_blank" rel="noopener" class="rounded-xl border border-slate-300/60 dark:border-slate-700/80 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">GitHub</a>
-            <a href="https://orcid.org/0009-0004-8976-8186" target="_blank" rel="noopener" class="rounded-xl border border-slate-300/60 dark:border-slate-700/80 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">ORCID</a>
+            <a href="#repositories" class="rounded-xl bg-sky-600 px-4 py-2 text-white hover:bg-sky-500">Browse repositories</a>
+            <a href="https://github.com/ossgenesis" target="_blank" rel="noopener" class="rounded-xl border border-slate-300/60 dark:border-slate-700/80 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">GitHub organization</a>
+            <a href="#blog" class="rounded-xl border border-slate-300/60 dark:border-slate-700/80 px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800">Read documentation</a>
           </div>
           <div class="mt-6">
-            <a href="https://doi.org/10.5281/zenodo.16883393" target="_blank" rel="noopener">
-              <img alt="DOI badge" src="https://zenodo.org/badge/DOI/10.5281/zenodo.16883393.svg" class="h-8"/>
+            <a href="https://github.com/ossgenesis/eks-without-ip-limit" target="_blank" rel="noopener" class="inline-flex items-center gap-3 text-sm text-sky-600 hover:underline">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-sky-100 text-sky-700 font-semibold">EKS</span>
+              <span>View the layered Terraform EKS blueprint →</span>
             </a>
           </div>
         </div>
@@ -86,10 +87,10 @@
           <div class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/60 dark:bg-slate-800/60 shadow-sm">
             <h2 class="text-xl font-semibold">Quick links</h2>
             <ul class="mt-3 space-y-2 text-sm">
-              <li><a class="hover:underline" href="https://github.com/bibin-skaria/eks-without-ip-limit" target="_blank" rel="noopener">EKS Without IP Limit (GitHub)</a></li>
-              <li><a class="hover:underline" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Open Collective (donate)</a></li>
-              <li><a class="hover:underline" href="https://doi.org/10.5281/zenodo.16883393" target="_blank" rel="noopener">Zenodo DOI (v1.33.0)</a></li>
-              <li><a class="hover:underline" href="mailto:bibin9992009@gmail.com">Contact</a></li>
+              <li><a class="hover:underline" href="https://github.com/ossgenesis" target="_blank" rel="noopener">GitHub Organization</a></li>
+              <li><a class="hover:underline" href="https://github.com/ossgenesis/eks-without-ip-limit" target="_blank" rel="noopener">AWS EKS Reference Architecture</a></li>
+              <li><a class="hover:underline" href="https://github.com/ossgenesis/jenkins-cloud-native" target="_blank" rel="noopener">Jenkins Cloud Native Helm Chart</a></li>
+              <li><a class="hover:underline" href="https://github.com/ossgenesis/ossb" target="_blank" rel="noopener">OSSB Container Builder</a></li>
             </ul>
           </div>
         </div>
@@ -103,45 +104,64 @@
         <a href="https://github.com/bibin-skaria?tab=repositories" target="_blank" rel="noopener" class="text-sky-600 hover:underline">All repos →</a>
       </div>
 
-      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Project Card -->
         <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
           <div class="flex items-start justify-between">
-            <h3 class="text-xl font-semibold">EKS Without IP Limit</h3>
-            <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-3 py-1 text-xs font-medium">v1.33.0</span>
+            <h3 class="text-xl font-semibold">AWS EKS Reference Architecture</h3>
+            <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-3 py-1 text-xs font-medium">Terraform</span>
           </div>
           <p class="mt-3 text-slate-600 dark:text-slate-300">
-            Terraform-based Amazon EKS reference architecture targeting Kubernetes/EKS 1.33. Avoids pod IP exhaustion using
-            AWS VPC CNI <em>custom networking</em> + <em>prefix delegation</em>, with an optional Cilium overlay. Module-based, production-ready.
+            Layered Terraform 1.5+ blueprint delivering VPC, EKS control plane, data plane, and workloads with prefix delegation
+            to break past pod IP limits. Designed for repeatable deployments across dev, UAT, and production.
           </p>
-          <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Terraform</span>
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">EKS 1.33</span>
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">VPC CNI</span>
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Cilium</span>
-          </div>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a class="rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" target="_blank" rel="noopener" href="https://github.com/bibin-skaria/eks-without-ip-limit">GitHub</a>
-            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://doi.org/10.5281/zenodo.16883393">DOI</a>
-            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://opencollective.com/eks-without-ip-limit">Sponsor</a>
+          <ul class="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <li>• 4-layer state isolation improves team velocity</li>
+            <li>• Prefix delegation + custom networking for 250+ pods per node</li>
+            <li>• Deployment orchestrated with `deploy.sh` for environment parity</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm">
+            <a class="rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" target="_blank" rel="noopener" href="https://github.com/ossgenesis/eks-without-ip-limit">GitHub</a>
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://github.com/ossgenesis/eks-without-ip-limit#-layered-architecture-approach">Architecture notes</a>
           </div>
         </article>
 
-        <!-- Add more project cards as needed -->
         <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
           <div class="flex items-start justify-between">
-            <h3 class="text-xl font-semibold">OSSGenesis Site</h3>
-            <span class="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 px-3 py-1 text-xs font-medium">personal</span>
+            <h3 class="text-xl font-semibold">Jenkins Cloud Native</h3>
+            <span class="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 px-3 py-1 text-xs font-medium">Helm</span>
           </div>
           <p class="mt-3 text-slate-600 dark:text-slate-300">
-            This website template — clean Tailwind CSS, dark mode, sections for projects and activity. Fork it and add your own content.
+            Helm chart that runs Jenkins with ephemeral Kubernetes agents so CI pipelines scale based on workload demand.
+            Includes opinionated values for cloud-networked masters, persistent storage, and autoscaling node pools.
           </p>
-          <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Tailwind</span>
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Static</span>
+          <ul class="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <li>• Master/agent separation with dynamic Pod templates</li>
+            <li>• Cloud-native defaults for RBAC, ingress, and storage classes</li>
+            <li>• Ready for GitOps adoption via Helmfile or Argo CD</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm">
+            <a class="rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" target="_blank" rel="noopener" href="https://github.com/ossgenesis/jenkins-cloud-native">GitHub</a>
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://github.com/ossgenesis/jenkins-cloud-native/tree/main">Chart values</a>
           </div>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" href="#" onclick="alert('This is the current page. Save as index.html to your domain hosting.'); return false;">Get this file</a>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <div class="flex items-start justify-between">
+            <h3 class="text-xl font-semibold">OSSB — Slim Builder</h3>
+            <span class="inline-flex items-center rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-3 py-1 text-xs font-medium">Research</span>
+          </div>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Proof-of-concept single-binary container builder inspired by BuildKit with pluggable frontends and rootless
+            execution. Demonstrates how to simplify image assembly while keeping content-addressable caching.</p>
+          <ul class="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <li>• Full Dockerfile parser and dependency graph solver</li>
+            <li>• Rootless execution with namespace isolation</li>
+            <li>• Extensible exporters and multi-architecture planning</li>
+          </ul>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm">
+            <a class="rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" target="_blank" rel="noopener" href="https://github.com/ossgenesis/ossb">GitHub</a>
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://github.com/ossgenesis/ossb/blob/main/LIMITATIONS.md">Limitations</a>
           </div>
         </article>
       </div>
@@ -161,9 +181,14 @@
             <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-3 py-1 text-xs font-medium">Terraform</span>
           </div>
           <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            Production-ready Amazon EKS reference architecture built with layered Terraform. Includes prefix delegation and
-            custom networking patterns to remove pod IP exhaustion while keeping deployments modular and auditable.
+            Production-ready Amazon EKS reference architecture built with layered Terraform (VPC → control plane → data plane → workloads).
+            Incorporates prefix delegation, custom VPC CNI networking, and modular state boundaries for safer team collaboration.
           </p>
+          <ul class="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <li>• `deploy.sh` automates environment bootstrap for dev/UAT/prod</li>
+            <li>• Remote state data sources chain outputs across layers</li>
+            <li>• Optional Cilium overlay and managed add-ons packaged in Layer 3</li>
+          </ul>
           <dl class="mt-4 grid grid-cols-2 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
             <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>HCL</dd></div>
             <div><dt class="font-medium text-slate-700 dark:text-slate-200">Updated</dt><dd>28 Sep 2025</dd></div>
@@ -179,11 +204,16 @@
             <span class="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 px-3 py-1 text-xs font-medium">Helm</span>
           </div>
           <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            Helm chart that delivers a cloud-native Jenkins with scalable ephemeral agents. Optimized for Kubernetes-based
-            CI/CD teams that need elastic build capacity and simplified operations.
+            Helm chart delivering a cloud-native Jenkins control plane with pod-based ephemeral agents. Targets teams running
+            Kubernetes-first CI/CD with autoscaling build capacity and GitOps friendly configuration.
           </p>
+          <ul class="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <li>• Provides baseline values for ingress, storage classes, and RBAC</li>
+            <li>• Ships PodTemplate definitions for containerized build agents</li>
+            <li>• Designed to plug into Argo CD, Flux, or Helmfile workflows</li>
+          </ul>
           <dl class="mt-4 grid grid-cols-2 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
-            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>YAML</dd></div>
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>Helm</dd></div>
             <div><dt class="font-medium text-slate-700 dark:text-slate-200">Updated</dt><dd>28 Sep 2025</dd></div>
           </dl>
           <div class="mt-5">
@@ -197,9 +227,14 @@
             <span class="inline-flex items-center rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-3 py-1 text-xs font-medium">Go</span>
           </div>
           <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            OSSB (Open Source Slim Builder) showcases a proof-of-concept, single-binary container builder inspired by BuildKit.
-            Focuses on pluggable execution, content-addressable caching, and rootless workflows for portable builds.
+            OSSB (Open Source Slim Builder) explores a single-binary alternative to BuildKit. Implements core concepts like
+            dependency graph solving, content-addressable caching, and rootless isolation while documenting open gaps.
           </p>
+          <ul class="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
+            <li>• CLI powered by Cobra with multi-architecture planning</li>
+            <li>• Pluggable frontends/executors/exporters for experimentation</li>
+            <li>• Public roadmap & LIMITATIONS.md outlining remaining work</li>
+          </ul>
           <dl class="mt-4 grid grid-cols-2 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
             <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>Go</dd></div>
             <div><dt class="font-medium text-slate-700 dark:text-slate-200">Updated</dt><dd>28 Sep 2025</dd></div>
@@ -214,38 +249,145 @@
     <!-- Blog -->
     <section id="blog" class="mx-auto max-w-6xl px-4 py-8">
       <h2 class="text-2xl sm:text-3xl font-bold">Blog</h2>
-      <div class="mt-6 grid gap-6 sm:grid-cols-2">
-        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
-          <header class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">
-              <a class="hover:underline" href="./Agile%20Methodology%20for%20ADB%20Managed%20Services%20Implementation.docx" target="_blank" rel="noopener">Agile Methodology for ADB Managed Services Implementation</a>
-            </h3>
-            <time class="text-xs rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Feb 2025</time>
+      <div class="mt-6 space-y-10">
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <header class="border-b border-slate-200/60 dark:border-slate-700/70 px-6 py-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 class="text-xl font-semibold">Agile Methodology for ADB Managed Services Implementation</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Full methodology playbook for Agile + CAB-aligned managed services delivery.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs">
+              <time class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Feb 2025</time>
+              <a class="inline-flex items-center rounded-full border border-slate-300/60 dark:border-slate-700/80 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800" href="./Agile%20Methodology%20for%20ADB%20Managed%20Services%20Implementation.docx" target="_blank" rel="noopener">Download .docx</a>
+            </div>
           </header>
-          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            Engagement playbook aligning Agile-Scrum ceremonies, backlog management, and sprint cadences with ADB SDLC
-            standards across L3 managed services. Covers team roles, delivery checkpoints, and service governance.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Agile</span>
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Managed Services</span>
+          <div class="px-6 py-6 space-y-3">
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">1. Introduction</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">This document outlines the Agile methodology to be followed for the Asian Development Bank (ADB) Managed Services engagement. It aligns with ADB’s SDLC standards and supports the delivery of L3 support, routine maintenance, and enhancements for Microsoft-based applications.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">2. Agile Framework Overview</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">ADB employs an Agile-Scrum approach for iterative and incremental delivery. The Managed Service Provider (MSP) will integrate with ADB’s existing product teams and collaborate closely during the entire development lifecycle.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Key Elements:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Length: 2 weeks</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Tools Used: Azure DevOps for backlog management, sprint tracking, and CI/CD</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Team Structure: Product Owner (ADB), Scrum Master (MSP), Development Team (MSP)</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Artifacts: Product Backlog, Sprint Backlog, Increment, Burndown Charts</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">3. Agile Roles & Responsibilities</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Product Owner (ADB): Defines user stories, prioritizes backlog, approves increments</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Scrum Master (MSP): Facilitates Agile ceremonies, removes impediments</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Development Team (MSP): Delivers shippable increment each sprint</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Testing Partner (ADB/Third Party): Executes SIT, UAT, performance testing</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">4. Agile Ceremonies</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Planning: Define sprint scope, assign story points</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Daily Standup: 15-minute sync on progress, blockers, and plans</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Review: Demo completed work to stakeholders</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Retrospective: Analyze what went well and identify improvements</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">5. Agile Artifacts</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Artifact</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Description</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Product Backlog</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">All feature/user story requests</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Backlog</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Stories committed for the sprint</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Burndown Chart</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Tracks sprint progress</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Increment</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Shippable deliverables</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Definition of Done</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Includes unit test, peer review, successful deployment to staging</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">6. Agile Process Flow</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Product Owner creates User Stories</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Stories are added to Product Backlog in Azure DevOps</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">During Sprint Planning, team selects stories for the Sprint Backlog</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Development, unit testing, documentation, and peer review are done</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Code is committed via CI pipeline for SIT/UAT</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Review and Retrospective</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">7. Agile Metrics & KPIs</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Velocity: Measure story points completed per sprint</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Burndown: Track remaining work</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Defect Leakage: Track bugs in production vs. QA</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Cycle Time: Time from story start to completion</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">8. Quality Assurance Integration</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Unit Testing by MSP</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">SIT & UAT by ADB’s Testing Partner</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Automated Testing using Azure DevOps pipelines</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Continuous Integration/Delivery aligned with CAB approval workflows</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">9. Change Management Integration</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">All enhancements require RFC approval from CAB</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Change plans must be aligned with sprint cycles</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Risk assessments must be done and documented prior to release</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">10. Continuous Improvement</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Lessons learned captured during Sprint Retrospective</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Monthly performance reports reviewed jointly by ADB and MSP</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Action items tracked for recurring issues and improvements</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">This Agile Methodology will serve as a living document and evolve with the engagement. It ensures responsiveness, flexibility, and transparency throughout the lifecycle of support and enhancements for ADB’s Microsoft-based solutions.</p>
           </div>
         </article>
 
-        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
-          <header class="flex items-start justify-between gap-3">
-            <h3 class="text-xl font-semibold">
-              <a class="hover:underline" href="./Change-management-BAU.docx" target="_blank" rel="noopener">Change Management BAU</a>
-            </h3>
-            <time class="text-xs rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Mar 2025</time>
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <header class="border-b border-slate-200/60 dark:border-slate-700/70 px-6 py-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 class="text-xl font-semibold">Change Management — Business-as-Usual Framework</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Structured RFC intake, CAB governance, and SLA tracking for managed services operations.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs">
+              <time class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Mar 2025</time>
+              <a class="inline-flex items-center rounded-full border border-slate-300/60 dark:border-slate-700/80 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800" href="./Change-management-BAU.docx" target="_blank" rel="noopener">Download .docx</a>
+            </div>
           </header>
-          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            Business-as-usual change and release management process built around RFC intake, impact and risk analysis,
-            CAB approvals, scheduling, and post-implementation validation to safeguard service continuity.
-          </p>
-          <div class="mt-4 flex flex-wrap gap-2 text-xs">
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Change Control</span>
-            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">ITSM</span>
+          <div class="px-6 py-6 space-y-3">
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Overview:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">The Change and Release Management Process ensures structured planning, approval, and execution of changes within the project lifecycle without negatively impacting business continuity.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Phases:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Change Request Initiation: Raised via RFC (Request for Change) in the Change Management System.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Impact Assessment: Includes risk, rollback, and resource availability analysis.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">CAB Review: All changes are reviewed by the Change Advisory Board (CAB).</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Approval & Scheduling: Changes are approved and planned during maintenance windows.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Implementation: Conducted by technical teams following DevSecOps practices.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Post-Implementation Review: Validation, documentation update, and stakeholder feedback.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Types of Changes:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Standard (pre-approved)</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Emergency</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Normal</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Tools:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Azure DevOps / JIRA for tracking</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Email notifications for CAB updates</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">2. Performance Reviews Deliverables & SLAs</h4>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Review Frequency:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Monthly and quarterly reviews with ADB and stakeholders</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Key Deliverables:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Monthly SLA Compliance Reports</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Issue/Incident Trends & RCA Summaries</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">DevOps KPIs (deployment frequency, MTTR, change failure rate)</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Test Coverage & Quality Metrics</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Capacity Planning Insights</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Continuous Improvement Initiatives</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Sample SLAs:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Critical Incident Response: &lt; 15 mins</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Incident Resolution: 90% within agreed timeframe</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">CI/CD Pipeline Uptime: 99.5%</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Release Deployment Success Rate: &gt; 98%</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">3. SLAs and Measurement Criteria for BaU Managed Services Work</h4>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Service Scope:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Ongoing maintenance, feature enhancement, bug fixes, system optimization</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Proposed SLAs:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Uptime &amp; Availability: 99.5%</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Incident Management:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Priority 1: Response in 15 mins, resolution within 4 hours</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Priority 2: Response in 30 mins, resolution within 8 hours</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Priority 3: Response in 1 hour, resolution within 24 hours</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Change Request Turnaround:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Minor: within 3 business days</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Major: within 7–10 business days post-approval</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Measurement Metrics:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">SLA Compliance %</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Average Time to Resolve</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">% of Tickets Resolved Within SLA</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Change Success Rate</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Downtime Incidents per Quarter</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Reporting:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Dashboards shared monthly</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Bi-weekly status calls</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Quarterly performance reviews</p>
           </div>
         </article>
       </div>
@@ -257,27 +399,27 @@
       <ol class="mt-6 space-y-4">
         <li class="rounded-xl border border-slate-200/70 dark:border-slate-700/80 p-4 bg-white/70 dark:bg-slate-800/60">
           <div class="flex items-center justify-between">
-            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑08‑15</span>
+            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑09‑28</span>
             <span class="text-xs rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-2 py-1">release</span>
           </div>
-          <p class="mt-1 font-medium">Released <em>EKS Without IP Limit</em> v1.33.0 and minted DOI.</p>
-          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://doi.org/10.5281/zenodo.16883393">10.5281/zenodo.16883393</a>
+          <p class="mt-1 font-medium">Published AWS EKS Reference Architecture with layered Terraform workflow for prod environments.</p>
+          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://github.com/ossgenesis/eks-without-ip-limit">github.com/ossgenesis/eks-without-ip-limit</a>
         </li>
         <li class="rounded-xl border border-slate-200/70 dark:border-slate-700/80 p-4 bg-white/70 dark:bg-slate-800/60">
           <div class="flex items-center justify-between">
-            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑08‑15</span>
-            <span class="text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-2 py-1">community</span>
+            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑09‑28</span>
+            <span class="text-xs rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-2 py-1">tooling</span>
           </div>
-          <p class="mt-1 font-medium">Opened Open Collective for project sustainability.</p>
-          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://opencollective.com/eks-without-ip-limit">opencollective.com/eks-without-ip-limit</a>
+          <p class="mt-1 font-medium">Released Jenkins Cloud Native chart for autoscaling Kubernetes-based CI/CD controllers.</p>
+          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://github.com/ossgenesis/jenkins-cloud-native">github.com/ossgenesis/jenkins-cloud-native</a>
         </li>
         <li class="rounded-xl border border-slate-200/70 dark:border-slate-700/80 p-4 bg-white/70 dark:bg-slate-800/60">
           <div class="flex items-center justify-between">
-            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑08‑15</span>
-            <span class="text-xs rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-2 py-1">profile</span>
+            <span class="text-sm text-slate-500 dark:text-slate-400">2025‑09‑28</span>
+            <span class="text-xs rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-2 py-1">research</span>
           </div>
-          <p class="mt-1 font-medium">Added ORCID record for the v1.33.0 software release.</p>
-          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://orcid.org/0009-0004-8976-8186">orcid.org/0009-0004-8976-8186</a>
+          <p class="mt-1 font-medium">Opened OSSB proof-of-concept repository highlighting a lightweight container builder.</p>
+          <a class="text-sky-600 hover:underline text-sm" target="_blank" rel="noopener" href="https://github.com/ossgenesis/ossb">github.com/ossgenesis/ossb</a>
         </li>
       </ol>
     </section>
@@ -288,23 +430,24 @@
       <div class="mt-4 grid gap-6 sm:grid-cols-3">
         <div class="sm:col-span-2">
           <p class="text-slate-600 dark:text-slate-300">
-            I’m a DevOps Engineer focused on reliable, secure, and cost‑efficient cloud platforms on AWS & Kubernetes.
-            I like turning complex infra into reusable modules and teaching others through docs and examples.
+            OSSGenesis curates open source reference implementations so platform engineering teams can adopt proven
+            infrastructure and operations practices without starting from scratch. We document the why, the how, and the
+            trade-offs directly in the repositories and supporting guides.
           </p>
-          <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-sm">
-            <li>• AWS, EKS, Terraform, Helm</li>
-            <li>• CI/CD: Jenkins, Spinnaker, Harness</li>
-            <li>• Observability: CloudWatch, ELK, Prometheus</li>
-            <li>• Certs: AWS SA, CKA, Azure DevOps, ex‑RHCE/RHCSA</li>
+          <ul class="mt-4 grid gap-2 sm:grid-cols-2 text-sm text-slate-600 dark:text-slate-300">
+            <li>• Infrastructure blueprints for AWS, Kubernetes, and Terraform</li>
+            <li>• Cloud-native CI/CD with Jenkins, GitOps, and automated quality gates</li>
+            <li>• Experimentation around container build tooling and supply chain hardening</li>
+            <li>• Governance artifacts: Agile frameworks, CAB integrations, service SLAs</li>
           </ul>
         </div>
         <aside class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
-          <h3 class="font-semibold">Links</h3>
+          <h3 class="font-semibold">Key Resources</h3>
           <ul class="mt-3 space-y-2 text-sm">
-            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/bibin-skaria">GitHub</a></li>
-            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://doi.org/10.5281/zenodo.16883393">Zenodo (DOI)</a></li>
-            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://orcid.org/0009-0004-8976-8186">ORCID</a></li>
-            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://opencollective.com/eks-without-ip-limit">Open Collective</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis">GitHub Organization</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis/eks-without-ip-limit">Terraform EKS Blueprint</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis/jenkins-cloud-native">Jenkins Cloud Native Chart</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis/ossb">OSSB Container Builder</a></li>
           </ul>
         </aside>
       </div>
@@ -315,9 +458,9 @@
       <div class="mx-auto max-w-6xl px-4 py-6 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
         <p>© <span id="year"></span> OSSGenesis · Built with ❤ and open source.</p>
         <div class="flex items-center gap-3">
-          <a class="hover:underline" href="mailto:bibin9992009@gmail.com">Contact</a>
-          <a class="hover:underline" href="https://github.com/bibin-skaria/eks-without-ip-limit">Repo</a>
-          <a class="hover:underline" href="https://opencollective.com/eks-without-ip-limit">Sponsor</a>
+          <a class="hover:underline" href="https://github.com/ossgenesis" target="_blank" rel="noopener">GitHub</a>
+          <a class="hover:underline" href="https://github.com/ossgenesis/eks-without-ip-limit" target="_blank" rel="noopener">Terraform repo</a>
+          <a class="hover:underline" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Sponsor</a>
         </div>
       </div>
     </footer>
