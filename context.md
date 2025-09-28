@@ -5,7 +5,7 @@
 - Highlighted all public repositories with detailed feature breakdowns in both the featured projects and repositories sections.
 - Inlined full content from the Agile methodology and Change Management `.docx` documents in the blog section (download links preserved).
 - Refreshed activity, about, and footer sections to point to the ossgenesis properties.
-- Credited Bibin Skaria as site administrator/publisher, added donation pathways, and polished visuals with extra CSS affordances.
+- Credited Bibin Skaria as site administrator/publisher, added donation pathways, polished visuals with extra CSS, and moved the full blog content into a dedicated `blog.html` page linked from the nav.
 
 ## Pending Items
 - `.docx` source documents remain untracked; convert to Markdown/HTML in-repo if binary files become inconvenient.

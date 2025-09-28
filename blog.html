@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OSSGenesis Blog — Operational Playbooks</title>
+    <meta name="description" content="Documentation, playbooks, and governance frameworks published by Bibin Skaria for the OSSGenesis community." />
+    <meta property="og:title" content="OSSGenesis Blog — Operational Playbooks" />
+    <meta property="og:description" content="Read Agile and change-management guides maintained by Bibin Skaria for OSSGenesis." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --ring: 0 0% 0%;
+        --shadow-color: 15 23 42;
+      }
+      html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      section { scroll-margin-top: 96px; }
+      .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.68); }
+      .dark .glass { background: rgba(17,24,39,0.6); }
+      .gradient {
+        background: radial-gradient(1200px 500px at 10% 10%, rgba(14,165,233,0.25), transparent),
+                    radial-gradient(1000px 400px at 90% 20%, rgba(99,102,241,0.2), transparent),
+                    radial-gradient(900px 300px at 50% 80%, rgba(34,197,94,0.18), transparent);
+      }
+      .shadow-sm {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      .shadow-sm:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 28px 45px -28px rgba(15,23,42,0.45);
+        border-color: rgba(14,165,233,0.35);
+      }
+      .dark .shadow-sm:hover {
+        box-shadow: 0 28px 45px -32px rgba(15,23,42,0.85);
+        border-color: rgba(125,211,252,0.35);
+      }
+      .blog-content h4 {
+        position: relative;
+        padding-left: 1.25rem;
+      }
+      .blog-content h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45rem;
+        width: 0.3rem;
+        height: 1.4rem;
+        border-radius: 9999px;
+        background: linear-gradient(180deg, rgba(59,130,246,0.7), rgba(125,211,252,0.7));
+      }
+      .blog-content p {
+        line-height: 1.75;
+      }
+    </style>
+  </head>
+  <body class="gradient min-h-screen text-slate-800 dark:text-slate-100 bg-white dark:bg-slate-900">
+    <header class="sticky top-0 z-30">
+      <div class="glass border-b border-white/20 dark:border-slate-700/60">
+        <nav class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+          <a href="index.html#home" class="flex items-center gap-2 font-semibold tracking-tight">
+            <span class="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-sky-500 text-white font-bold">OG</span>
+            <span>OSSGenesis</span>
+          </a>
+          <div class="flex items-center gap-3 text-sm">
+            <a class="hover:underline" href="index.html#projects">Projects</a>
+            <a class="hover:underline" href="index.html#repositories">Repositories</a>
+            <a class="hover:underline text-sky-600 font-semibold" aria-current="page" href="blog.html">Blog</a>
+            <a class="hover:underline" href="index.html#activity">Activity</a>
+            <a class="hover:underline" href="index.html#about">About</a>
+            <a class="hidden sm:inline-block rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate</a>
+            <button id="themeToggle" class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle theme">🌓</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4 pt-14 pb-12 sm:pt-20 sm:pb-16">
+      <div class="rounded-3xl border border-slate-200/70 dark:border-slate-700/80 bg-white/80 dark:bg-slate-800/60 p-8 shadow-sm">
+        <span class="inline-flex items-center rounded-full bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300 px-3 py-1 text-xs font-semibold">Documentation</span>
+        <h1 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight">Operational playbooks curated by Bibin Skaria</h1>
+        <p class="mt-4 text-slate-600 dark:text-slate-300 text-base sm:text-lg">
+          Long-form guidance for Agile delivery, CAB governance, and managed services operations maintained by the
+          OSSGenesis admin. Download the original `.docx` sources or read inline.
+        </p>
+      </div>
+
+      <section class="mt-12 space-y-10">
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <header class="border-b border-slate-200/60 dark:border-slate-700/70 px-6 py-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 class="text-xl font-semibold">Agile Methodology for ADB Managed Services Implementation</h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Full methodology playbook for Agile + CAB-aligned managed services delivery.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-500 mt-1">Published by Bibin Skaria · Feb 2025</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs">
+              <a class="inline-flex items-center rounded-full border border-slate-300/60 dark:border-slate-700/80 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800" href="./Agile%20Methodology%20for%20ADB%20Managed%20Services%20Implementation.docx" target="_blank" rel="noopener">Download .docx</a>
+            </div>
+          </header>
+          <div class="px-6 py-6 space-y-3 blog-content">
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">1. Introduction</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">This document outlines the Agile methodology to be followed for the Asian Development Bank (ADB) Managed Services engagement. It aligns with ADB’s SDLC standards and supports the delivery of L3 support, routine maintenance, and enhancements for Microsoft-based applications.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">2. Agile Framework Overview</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">ADB employs an Agile-Scrum approach for iterative and incremental delivery. The Managed Service Provider (MSP) will integrate with ADB’s existing product teams and collaborate closely during the entire development lifecycle.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Key Elements:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Length: 2 weeks</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Tools Used: Azure DevOps for backlog management, sprint tracking, and CI/CD</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Team Structure: Product Owner (ADB), Scrum Master (MSP), Development Team (MSP)</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Artifacts: Product Backlog, Sprint Backlog, Increment, Burndown Charts</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">3. Agile Roles & Responsibilities</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Product Owner (ADB): Defines user stories, prioritizes backlog, approves increments</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Scrum Master (MSP): Facilitates Agile ceremonies, removes impediments</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Development Team (MSP): Delivers shippable increment each sprint</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Testing Partner (ADB/Third Party): Executes SIT, UAT, performance testing</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">4. Agile Ceremonies</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Planning: Define sprint scope, assign story points</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Daily Standup: 15-minute sync on progress, blockers, and plans</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Review: Demo completed work to stakeholders</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Retrospective: Analyze what went well and identify improvements</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">5. Agile Artifacts</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Artifact</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Description</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Product Backlog</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">All feature/user story requests</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Backlog</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Stories committed for the sprint</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Burndown Chart</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Tracks sprint progress</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Increment</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Shippable deliverables</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Definition of Done</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Includes unit test, peer review, successful deployment to staging</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">6. Agile Process Flow</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Product Owner creates User Stories</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Stories are added to Product Backlog in Azure DevOps</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">During Sprint Planning, team selects stories for the Sprint Backlog</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Development, unit testing, documentation, and peer review are done</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Code is committed via CI pipeline for SIT/UAT</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Review and Retrospective</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">7. Agile Metrics & KPIs</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Velocity: Measure story points completed per sprint</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Sprint Burndown: Track remaining work</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Defect Leakage: Track bugs in production vs. QA</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Cycle Time: Time from story start to completion</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">8. Quality Assurance Integration</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Unit Testing by MSP</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">SIT & UAT by ADB’s Testing Partner</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Automated Testing using Azure DevOps pipelines</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Continuous Integration/Delivery aligned with CAB approval workflows</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">9. Change Management Integration</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">All enhancements require RFC approval from CAB</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Change plans must be aligned with sprint cycles</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Risk assessments must be done and documented prior to release</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">10. Continuous Improvement</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Lessons learned captured during Sprint Retrospective</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Monthly performance reports reviewed jointly by ADB and MSP</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Action items tracked for recurring issues and improvements</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">This Agile Methodology will serve as a living document and evolve with the engagement. It ensures responsiveness, flexibility, and transparency throughout the lifecycle of support and enhancements for ADB’s Microsoft-based solutions.</p>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <header class="border-b border-slate-200/60 dark:border-slate-700/70 px-6 py-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 class="text-xl font-semibold">Change Management — Business-as-Usual Framework</h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Structured RFC intake, CAB governance, and SLA tracking for managed services operations.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-500 mt-1">Published by Bibin Skaria · Mar 2025</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs">
+              <a class="inline-flex items-center rounded-full border border-slate-300/60 dark:border-slate-700/80 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800" href="./Change-management-BAU.docx" target="_blank" rel="noopener">Download .docx</a>
+            </div>
+          </header>
+          <div class="px-6 py-6 space-y-3 blog-content">
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Overview:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">The Change and Release Management Process ensures structured planning, approval, and execution of changes within the project lifecycle without negatively impacting business continuity.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Phases:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Change Request Initiation: Raised via RFC (Request for Change) in the Change Management System.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Impact Assessment: Includes risk, rollback, and resource availability analysis.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">CAB Review: All changes are reviewed by the Change Advisory Board (CAB).</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Approval & Scheduling: Changes are approved and planned during maintenance windows.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Implementation: Conducted by technical teams following DevSecOps practices.</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Post-Implementation Review: Validation, documentation update, and stakeholder feedback.</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Types of Changes:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Standard (pre-approved)</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Emergency</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Normal</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Tools:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Azure DevOps / JIRA for tracking</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Email notifications for CAB updates</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">2. Performance Reviews Deliverables & SLAs</h4>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Review Frequency:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Monthly and quarterly reviews with ADB and stakeholders</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Key Deliverables:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Monthly SLA Compliance Reports</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Issue/Incident Trends & RCA Summaries</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">DevOps KPIs (deployment frequency, MTTR, change failure rate)</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Test Coverage & Quality Metrics</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Capacity Planning Insights</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Continuous Improvement Initiatives</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Sample SLAs:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Critical Incident Response: &lt; 15 mins</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Incident Resolution: 90% within agreed timeframe</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">CI/CD Pipeline Uptime: 99.5%</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Release Deployment Success Rate: &gt; 98%</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">3. SLAs and Measurement Criteria for BaU Managed Services Work</h4>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Service Scope:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Ongoing maintenance, feature enhancement, bug fixes, system optimization</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Proposed SLAs:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Uptime &amp; Availability: 99.5%</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Incident Management:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Priority 1: Response in 15 mins, resolution within 4 hours</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Priority 2: Response in 30 mins, resolution within 8 hours</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Priority 3: Response in 1 hour, resolution within 24 hours</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Change Request Turnaround:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Minor: within 3 business days</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Major: within 7–10 business days post-approval</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Measurement Metrics:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">SLA Compliance %</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Average Time to Resolve</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">% of Tickets Resolved Within SLA</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Change Success Rate</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Downtime Incidents per Quarter</p>
+<h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Reporting:</h4>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Dashboards shared monthly</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Bi-weekly status calls</p>
+<p class="leading-relaxed text-slate-600 dark:text-slate-300">Quarterly performance reviews</p>
+          </div>
+        </article>
+
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-sky-50/70 dark:bg-sky-900/20 px-6 py-6">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-700 dark:text-slate-100">Support the documentation work</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Help Bibin Skaria and the OSSGenesis community maintain actionable runbooks and architecture guides.</p>
+          </div>
+          <a class="inline-flex items-center justify-center rounded-lg bg-sky-600 px-4 py-2 text-white text-sm font-medium hover:bg-sky-500" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate on Open Collective</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200/70 dark:border-slate-700/80">
+      <div class="mx-auto max-w-6xl px-4 py-6 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>© <span id="year"></span> OSSGenesis · Built with ❤ and open source.</p>
+        <div class="flex items-center gap-3">
+          <a class="hover:underline" href="https://github.com/ossgenesis" target="_blank" rel="noopener">GitHub</a>
+          <a class="hover:underline" href="https://github.com/ossgenesis/eks-without-ip-limit" target="_blank" rel="noopener">Terraform repo</a>
+          <a class="hover:underline" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>
