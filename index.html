@@ -26,14 +26,47 @@
       }
     </script>
     <style>
-      :root { --ring: 0 0% 0%; }
+      :root {
+        --ring: 0 0% 0%;
+        --shadow-color: 15 23 42;
+      }
       html, body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
-      .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.65); }
+      section { scroll-margin-top: 96px; }
+      .glass { backdrop-filter: blur(8px); background: rgba(255,255,255,0.68); }
       .dark .glass { background: rgba(17,24,39,0.6); }
       .gradient {
         background: radial-gradient(1200px 500px at 10% 10%, rgba(14,165,233,0.25), transparent),
                     radial-gradient(1000px 400px at 90% 20%, rgba(99,102,241,0.2), transparent),
                     radial-gradient(900px 300px at 50% 80%, rgba(34,197,94,0.18), transparent);
+      }
+      .shadow-sm {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      .shadow-sm:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 28px 45px -28px rgba(15,23,42,0.45);
+        border-color: rgba(14,165,233,0.35);
+      }
+      .dark .shadow-sm:hover {
+        box-shadow: 0 28px 45px -32px rgba(15,23,42,0.85);
+        border-color: rgba(125,211,252,0.35);
+      }
+      .blog-content h4 {
+        position: relative;
+        padding-left: 1.25rem;
+      }
+      .blog-content h4::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.45rem;
+        width: 0.3rem;
+        height: 1.4rem;
+        border-radius: 9999px;
+        background: linear-gradient(180deg, rgba(59,130,246,0.7), rgba(125,211,252,0.7));
+      }
+      .blog-content p {
+        line-height: 1.75;
       }
     </style>
   </head>
@@ -52,7 +85,7 @@
             <a class="hover:underline" href="#blog">Blog</a>
             <a class="hover:underline" href="#activity">Activity</a>
             <a class="hover:underline" href="#about">About</a>
-            <a class="hidden sm:inline-block rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Sponsor</a>
+            <a class="hidden sm:inline-block rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate</a>
             <button id="themeToggle" class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 hover:bg-slate-100 dark:hover:bg-slate-800" title="Toggle theme">🌓</button>
           </div>
         </nav>
@@ -82,6 +115,10 @@
               <span>View the layered Terraform EKS blueprint →</span>
             </a>
           </div>
+          <div class="mt-6 flex items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+            <span class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-200 px-3 py-1">Admin</span>
+            <span>Site administration and editorial stewardship by <strong>Bibin Skaria</strong>.</span>
+          </div>
         </div>
         <div class="sm:w-5/12">
           <div class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/60 dark:bg-slate-800/60 shadow-sm">
@@ -90,7 +127,7 @@
               <li><a class="hover:underline" href="https://github.com/ossgenesis" target="_blank" rel="noopener">GitHub Organization</a></li>
               <li><a class="hover:underline" href="https://github.com/ossgenesis/eks-without-ip-limit" target="_blank" rel="noopener">AWS EKS Reference Architecture</a></li>
               <li><a class="hover:underline" href="https://github.com/ossgenesis/jenkins-cloud-native" target="_blank" rel="noopener">Jenkins Cloud Native Helm Chart</a></li>
-              <li><a class="hover:underline" href="https://github.com/ossgenesis/ossb" target="_blank" rel="noopener">OSSB Container Builder</a></li>
+              <li><a class="hover:underline" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate on Open Collective</a></li>
             </ul>
           </div>
         </div>
@@ -255,13 +292,14 @@
             <div>
               <h3 class="text-xl font-semibold">Agile Methodology for ADB Managed Services Implementation</h3>
               <p class="text-sm text-slate-500 dark:text-slate-400">Full methodology playbook for Agile + CAB-aligned managed services delivery.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-500 mt-1">Published by Bibin Skaria</p>
             </div>
             <div class="flex flex-wrap items-center gap-3 text-xs">
               <time class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Feb 2025</time>
               <a class="inline-flex items-center rounded-full border border-slate-300/60 dark:border-slate-700/80 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800" href="./Agile%20Methodology%20for%20ADB%20Managed%20Services%20Implementation.docx" target="_blank" rel="noopener">Download .docx</a>
             </div>
           </header>
-          <div class="px-6 py-6 space-y-3">
+          <div class="px-6 py-6 space-y-3 blog-content">
 <h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">1. Introduction</h4>
 <p class="leading-relaxed text-slate-600 dark:text-slate-300">This document outlines the Agile methodology to be followed for the Asian Development Bank (ADB) Managed Services engagement. It aligns with ADB’s SDLC standards and supports the delivery of L3 support, routine maintenance, and enhancements for Microsoft-based applications.</p>
 <h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">2. Agile Framework Overview</h4>
@@ -328,13 +366,14 @@
             <div>
               <h3 class="text-xl font-semibold">Change Management — Business-as-Usual Framework</h3>
               <p class="text-sm text-slate-500 dark:text-slate-400">Structured RFC intake, CAB governance, and SLA tracking for managed services operations.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-500 mt-1">Published by Bibin Skaria</p>
             </div>
             <div class="flex flex-wrap items-center gap-3 text-xs">
               <time class="inline-flex items-center rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Mar 2025</time>
               <a class="inline-flex items-center rounded-full border border-slate-300/60 dark:border-slate-700/80 px-3 py-1 hover:bg-slate-100 dark:hover:bg-slate-800" href="./Change-management-BAU.docx" target="_blank" rel="noopener">Download .docx</a>
             </div>
           </header>
-          <div class="px-6 py-6 space-y-3">
+          <div class="px-6 py-6 space-y-3 blog-content">
 <h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Overview:</h4>
 <p class="leading-relaxed text-slate-600 dark:text-slate-300">The Change and Release Management Process ensures structured planning, approval, and execution of changes within the project lifecycle without negatively impacting business continuity.</p>
 <h4 class="mt-4 font-semibold text-slate-700 dark:text-slate-200">Phases:</h4>
@@ -390,6 +429,14 @@
 <p class="leading-relaxed text-slate-600 dark:text-slate-300">Quarterly performance reviews</p>
           </div>
         </article>
+
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-2xl border border-slate-200/70 dark:border-slate-700/80 bg-sky-50/70 dark:bg-sky-900/20 px-6 py-6">
+          <div>
+            <h4 class="text-lg font-semibold text-slate-700 dark:text-slate-100">Support the documentation work</h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mt-1">Help Bibin Skaria and the OSSGenesis community maintain actionable runbooks and architecture guides.</p>
+          </div>
+          <a class="inline-flex items-center justify-center rounded-lg bg-sky-600 px-4 py-2 text-white text-sm font-medium hover:bg-sky-500" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate on Open Collective</a>
+        </div>
       </div>
     </section>
 
@@ -448,6 +495,7 @@
             <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis/eks-without-ip-limit">Terraform EKS Blueprint</a></li>
             <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis/jenkins-cloud-native">Jenkins Cloud Native Chart</a></li>
             <li><a class="hover:underline" target="_blank" rel="noopener" href="https://github.com/ossgenesis/ossb">OSSB Container Builder</a></li>
+            <li><a class="hover:underline" target="_blank" rel="noopener" href="https://opencollective.com/ossgenesis">Support via Open Collective</a></li>
           </ul>
         </aside>
       </div>
@@ -460,7 +508,7 @@
         <div class="flex items-center gap-3">
           <a class="hover:underline" href="https://github.com/ossgenesis" target="_blank" rel="noopener">GitHub</a>
           <a class="hover:underline" href="https://github.com/ossgenesis/eks-without-ip-limit" target="_blank" rel="noopener">Terraform repo</a>
-          <a class="hover:underline" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Sponsor</a>
+          <a class="hover:underline" href="https://opencollective.com/ossgenesis" target="_blank" rel="noopener">Donate</a>
         </div>
       </div>
     </footer>
