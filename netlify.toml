@@ -1,0 +1,18 @@
+# netlify.toml at repo root
+[build]
+publish = "."
+# no build command for a plain HTML site
+
+# Optional: force HTTPS, basic caching, and a default 404 fallback
+[[headers]]
+for = "/*"
+[headers.values]
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+X-Content-Type-Options = "nosniff"
+Cache-Control = "public, max-age=600"
+
+# Single-page app style fallback (remove if not needed)
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
