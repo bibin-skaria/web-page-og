@@ -48,6 +48,8 @@
           </a>
           <div class="flex items-center gap-3 text-sm">
             <a class="hover:underline" href="#projects">Projects</a>
+            <a class="hover:underline" href="#repositories">Repositories</a>
+            <a class="hover:underline" href="#blog">Blog</a>
             <a class="hover:underline" href="#activity">Activity</a>
             <a class="hover:underline" href="#about">About</a>
             <a class="hidden sm:inline-block rounded-lg bg-sky-600 px-3 py-2 text-white hover:bg-sky-500" href="https://opencollective.com/eks-without-ip-limit" target="_blank" rel="noopener">Sponsor</a>
@@ -145,6 +147,110 @@
       </div>
     </section>
 
+    <!-- Repositories -->
+    <section id="repositories" class="mx-auto max-w-6xl px-4 py-8">
+      <div class="flex items-center justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-bold">Organization Repositories</h2>
+        <a href="https://github.com/ossgenesis" target="_blank" rel="noopener" class="text-sky-600 hover:underline">github.com/ossgenesis →</a>
+      </div>
+
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-semibold">eks-without-ip-limit</h3>
+            <span class="inline-flex items-center rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300 px-3 py-1 text-xs font-medium">Terraform</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            Production-ready Amazon EKS reference architecture built with layered Terraform. Includes prefix delegation and
+            custom networking patterns to remove pod IP exhaustion while keeping deployments modular and auditable.
+          </p>
+          <dl class="mt-4 grid grid-cols-2 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>HCL</dd></div>
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Updated</dt><dd>28 Sep 2025</dd></div>
+          </dl>
+          <div class="mt-5">
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://github.com/ossgenesis/eks-without-ip-limit">View repository</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-semibold">jenkins-cloud-native</h3>
+            <span class="inline-flex items-center rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 px-3 py-1 text-xs font-medium">Helm</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            Helm chart that delivers a cloud-native Jenkins with scalable ephemeral agents. Optimized for Kubernetes-based
+            CI/CD teams that need elastic build capacity and simplified operations.
+          </p>
+          <dl class="mt-4 grid grid-cols-2 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>YAML</dd></div>
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Updated</dt><dd>28 Sep 2025</dd></div>
+          </dl>
+          <div class="mt-5">
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://github.com/ossgenesis/jenkins-cloud-native">View repository</a>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-semibold">ossb</h3>
+            <span class="inline-flex items-center rounded-full bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300 px-3 py-1 text-xs font-medium">Go</span>
+          </div>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            OSSB (Open Source Slim Builder) showcases a proof-of-concept, single-binary container builder inspired by BuildKit.
+            Focuses on pluggable execution, content-addressable caching, and rootless workflows for portable builds.
+          </p>
+          <dl class="mt-4 grid grid-cols-2 gap-y-2 text-xs text-slate-500 dark:text-slate-400">
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Primary</dt><dd>Go</dd></div>
+            <div><dt class="font-medium text-slate-700 dark:text-slate-200">Updated</dt><dd>28 Sep 2025</dd></div>
+          </dl>
+          <div class="mt-5">
+            <a class="rounded-lg border border-slate-300/60 dark:border-slate-700/80 px-3 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800" target="_blank" rel="noopener" href="https://github.com/ossgenesis/ossb">View repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="mx-auto max-w-6xl px-4 py-8">
+      <h2 class="text-2xl sm:text-3xl font-bold">Blog</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2">
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <header class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-semibold">
+              <a class="hover:underline" href="./Agile%20Methodology%20for%20ADB%20Managed%20Services%20Implementation.docx" target="_blank" rel="noopener">Agile Methodology for ADB Managed Services Implementation</a>
+            </h3>
+            <time class="text-xs rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Feb 2025</time>
+          </header>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            Engagement playbook aligning Agile-Scrum ceremonies, backlog management, and sprint cadences with ADB SDLC
+            standards across L3 managed services. Covers team roles, delivery checkpoints, and service governance.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Agile</span>
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Managed Services</span>
+          </div>
+        </article>
+
+        <article class="rounded-2xl border border-slate-200/70 dark:border-slate-700/80 p-6 bg-white/70 dark:bg-slate-800/60 shadow-sm">
+          <header class="flex items-start justify-between gap-3">
+            <h3 class="text-xl font-semibold">
+              <a class="hover:underline" href="./Change-management-BAU.docx" target="_blank" rel="noopener">Change Management BAU</a>
+            </h3>
+            <time class="text-xs rounded-full bg-slate-100 text-slate-600 dark:bg-slate-800/80 dark:text-slate-300 px-3 py-1">Published Mar 2025</time>
+          </header>
+          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+            Business-as-usual change and release management process built around RFC intake, impact and risk analysis,
+            CAB approvals, scheduling, and post-implementation validation to safeguard service continuity.
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">Change Control</span>
+            <span class="rounded-full bg-slate-100 dark:bg-slate-800/80 px-3 py-1">ITSM</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Activity -->
     <section id="activity" class="mx-auto max-w-6xl px-4 py-8">
       <h2 class="text-2xl sm:text-3xl font-bold">Recent Activity</h2>
@@ -225,4 +331,3 @@
     </script>
   </body>
 </html>
-
